@@ -9,16 +9,15 @@ html(lang='en')
     link(rel='stylesheet', href='/fa/css/font-awesome.min.css')
   body
     .container
+      include nav2
       marquee
         h2(align=center)
-          img(src='https://www.colourbox.com/preview/4226251-cartoon-ufo.jpg')
+          block theMarquee
       .row
         .col-xs-12
           block title
-          include nav
       .row
         .col-xs-12
           block content
-
       script(src='/jquery-2.2.4.min.js')
       script(src='/bootstrap/js/bootstrap.min.js')

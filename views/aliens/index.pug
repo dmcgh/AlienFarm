@@ -1,14 +1,25 @@
 extends ../shared/template
 block title
-  h1 Alien List
+  .row
+    .col-xs-5
+    .col-xs-2
+      h1 Alien List
+    .col-xs-5
+
 block content
-  ul
-    each val in aliens
-      li
-        .media
-          .media-left.media-middle
-            a(href='/aliens/' + val.id)
-              img.media-object(src=val.photo, alt='\#{val.name}', height="64", width="64")
-          .media-body
-            h4.media-heading #{val.name}
-            |           The alien #{val.name} hails from the planet #{val.planet}
+  .row
+    .col-xs-3
+    .col-xs-6
+      ul
+        each val in aliens
+          li
+            .media
+              .media-left.media-middle
+                a(href='/aliens/' + val.id)
+                  img.media-object(src=val.photo, alt='\#{val.name}', height="64", width="64")
+              .media-body
+                h4.media-heading #{val.name}
+                |           The alien #{val.name} hails from the planet #{val.planet}
+      .col-xs-3
+block theMarquee
+  img(src='https://www.colourbox.com/preview/4226251-cartoon-ufo.jpg')

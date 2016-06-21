@@ -1,6 +1,16 @@
 extends ../shared/template
 block title
-  h1 #{alien.name}
+  .row
+      .col-xs-5
+      .col-xs-2
+        h1 #{alien.name}
+      .col-xs-5
 block content
-  h2
-    img(src=alien.photo)
+  .row
+    .col-xs-5
+    .col-xs-2
+      h2
+      #hello #{alien.name} is from the planet #{alien.planet}
+    .col-xs-5
+block theMarquee
+  img(src=alien.photo)
