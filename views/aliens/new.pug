@@ -1,0 +1,19 @@
+extends ../shared/Template
+block title
+  h1 New Aliens
+block content
+  .row
+    .col-xs-4
+    .col-xs-4
+      form(action='/aliens', method='post')
+        .form-group
+          label(for='name') Name of the Alien
+          input#exampleInputEmail1.form-control(name='name', type='text', placeholder='Bob')
+        .form-group
+          label(for='photo') Profile Pic
+          input#exampleInputPassword1.form-control(name='photo', type='url', placeholder='http://mypic.jpg')
+        .form-group
+          label(for='planet') Planet Pic
+          input#exampleInputPassword1.form-control(name='planet', type='text', placeholder='Not Earch')
+        button.btn.btn-default(type='submit') Submit
+    .col-xs-4
